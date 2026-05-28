@@ -1,0 +1,31 @@
+{
+  "name": "@yourorg/artifactory-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Maven artifact lookups against an internal JFrog Artifactory. Reads credentials from ~/.m2/settings.xml; never accepts tokens via CLI arg. Wraps mvn versions:* for correct POM resolution and uses JFrog REST JSON for directory listings.",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "artifactory-mcp": "src/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "@xmldom/xmldom": "^0.9.8",
+    "axios": "^1.15.2",
+    "zod": "^3.25.67"
+  },
+  "files": [
+    "src"
+  ],
+  "keywords": [
+    "mcp",
+    "artifactory",
+    "jfrog",
+    "maven"
+  ]
+}
